@@ -62,7 +62,8 @@ def MirrorDiagonal(matrix, width, height):
 
 
 def MirrorDiagonal2(matrix, width, height):
-    pass
+    MirrorHorizontal(matrix, width, height)
+    MirrorVetical(matrix, width, height)
 
 
 def Negative(matrix, width, height):
