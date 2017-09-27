@@ -41,7 +41,11 @@ def MirrorVetical(matrix, width, height):
 
 
 def MirrorHorizontal(matrix, width, height):
-    pass
+    for i in range(0, width):
+        for j in range(0, int(height / 2)):
+            r, g, b = matrix[i, j]
+            matrix[i, j] = matrix[i, height - 1 - j]
+            matrix[i, height - 1 - j] = (r, g, b)
 
 
 def MirrorDiagonal(matrix, width, height):
