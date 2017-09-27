@@ -49,7 +49,16 @@ def MirrorHorizontal(matrix, width, height):
 
 
 def MirrorDiagonal(matrix, width, height):
-    pass
+    for i in range(0, int(width / 2)):
+        for j in range(0, height):
+            r, g, b = matrix[i, j]
+            matrix[i, j] = matrix[width - 1 - i, j]
+            matrix[width - 1 - i, j] = (r, g, b)
+    for i in range(0, width):
+        for j in range(0, int(height / 2)):
+            r, g, b = matrix[i, j]
+            matrix[i, j] = matrix[i, height - 1 - j]
+            matrix[i, height - 1 - j] = (r, g, b)
 
 
 def MirrorDiagonal2(matrix, width, height):
