@@ -26,7 +26,10 @@ def BlackAndWhite(matrix, width, height):
 
 
 def Mosaic(matrix, width, height):
-    pass
+    for i in range(0, width):
+        for j in range(0, height):
+            if(i % 2 != 0 or j % 2 != 0):
+                matrix[i, j] = (0, 0, 0)
 
 
 def MirrorVetical(matrix, width, height):
