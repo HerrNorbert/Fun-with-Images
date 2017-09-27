@@ -67,7 +67,11 @@ def MirrorDiagonal2(matrix, width, height):
 
 
 def Negative(matrix, width, height):
-    pass
+    max = 255
+    for i in range(0, width):
+        for j in range(0, height):
+            r, g, b = matrix[i,j]
+            matrix[i, j] = (max - r, max - g, max - b)
 
 
 def Encode(matrix, width, height, message):
