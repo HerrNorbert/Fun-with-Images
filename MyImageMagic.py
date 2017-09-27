@@ -75,7 +75,21 @@ def Negative(matrix, width, height):
 
 
 def Encode(matrix, width, height, message):
-    pass
+    charIndex = 0
+    charOffSet = ord('A')
+    for i in range(0, width):
+        for j in range(0, height):
+            r, g, b = matrix[i, j]
+            charCode = ord(message[charIndex])
+            encodedChar = charCode - charOffSet
+            integrate = int(encodedChar / 3)
+            leftOver = encodedChar - (integrate * 3)
+            checkSum = integrate + leftOver
+            matrix[i, j] = (r + integrate, g + leftOver, b + checkSum)
+            if len(message) > charIndex + 1:
+                charIndex += 1
+            else:
+                return
 
 
 def Decode(original, encoded, width, height):
