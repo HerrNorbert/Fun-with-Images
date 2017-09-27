@@ -2,7 +2,11 @@ from PIL import Image
 
 
 def Lighter(matrix, width, height, amount):
-    pass
+    amount = abs(int(amount))
+    for i in range(0, width):
+        for j in range(0, height):
+            r, g, b = matrix[i,j]
+            matrix[i, j] = (r + amount, g + amount, g + amount)
 
 
 def Darker(matrix, width, height, amount):
@@ -45,7 +49,8 @@ def Decode(original, encoded, width, height):
     pass
 
 
-image = Image.open("encoded.png")
+image = Image.open("kep.png")
 pixelMatrix = image.load()
 width, height = image.size
 print("Ahoi, this picture's size is: " + str(width) + " x " + str(height))
+image.save("modified.png")
