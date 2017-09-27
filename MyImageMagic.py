@@ -18,7 +18,11 @@ def Darker(matrix, width, height, amount):
 
 
 def BlackAndWhite(matrix, width, height):
-    pass
+    for i in range(0, width):
+        for j in range(0, height):
+            r, g, b = matrix[i,j]
+            average = (r + g + b) / 3
+            matrix[i, j] = (int(average), int(average), int(average))
 
 
 def Mosaic(matrix, width, height):
@@ -58,3 +62,4 @@ pixelMatrix = image.load()
 width, height = image.size
 print("Ahoi, this picture's size is: " + str(width) + " x " + str(height))
 image.save("modified.png")
+
