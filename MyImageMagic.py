@@ -93,7 +93,21 @@ def Encode(matrix, width, height, message):
 
 
 def Decode(original, encoded, width, height):
-    pass
+    message = ""
+    charOffSet = ord('A')
+    for i in range(0, width):
+        for j in range(0, height):
+            r, g, b = encoded[i, j]
+            oR, oG, oB = original[i, j]
+            r -= oR
+            g -= oG
+            b -= oB
+            if r + g == b and r != 0:
+                message += chr(charOffSet + 3 * r + g)
+            elif r + g != b :
+                message += '☠️'
+            else:
+                return message
 
 
 image = Image.open("kep.png")
