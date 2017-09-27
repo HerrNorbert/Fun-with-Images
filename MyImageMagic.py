@@ -33,7 +33,11 @@ def Mosaic(matrix, width, height):
 
 
 def MirrorVetical(matrix, width, height):
-    pass
+    for i in range(0, int(width / 2)):
+        for j in range(0, height):
+            r, g, b = matrix[i, j]
+            matrix[i, j] = matrix[width - 1 - i, j]
+            matrix[width - 1 - i, j] = (r, g, b)
 
 
 def MirrorHorizontal(matrix, width, height):
