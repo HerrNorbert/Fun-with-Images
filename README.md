@@ -3,23 +3,24 @@ This is a basic image modifier in python #MyPhotshop^^
 
 The functionalities:
 
-- Original picture
+# Original picture
 ![original picure](assets/original.png)
-- Lighting
+# Lighter
 ![light](assets/light.png)
-- Darking
+# Darker
 ![dark](assets/dark.png)
-- Mozaic
+# Mozaic
 ![mosaic](assets/mosaic.png)
-- Negative
+# Negative
 ![negative](assets/negative.png)
-- Black and White
+# Black and White
 ![black_and_white](assets/black_and_white.png)
-- Mirroring vertical
+# Mirroring Horizontal
 ![mirror2](assets/mirror2.png)
-- Mirroring Horizontal
+# Mirroring vertical
 ![mirror](assets/mirror.png)
-- Mirroring Diagonal
+# Mirroring Diagonal
 ![mirror3](assets/mirror3.png)
-- Secret Message
+# Secret Message
 ![encoded](assets/encoded.png)
+- "The problem is not the problem. The problem is your attitude about the problem"
