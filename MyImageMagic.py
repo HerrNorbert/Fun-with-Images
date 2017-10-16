@@ -1,7 +1,7 @@
 from PIL import Image
 
 
-def Lighter(matrix, width, height, amount):
+def lighter(matrix, width, height, amount):
     amount = abs(int(amount))
     for i in range(0, width):
         for j in range(0, height):
@@ -9,7 +9,7 @@ def Lighter(matrix, width, height, amount):
             matrix[i, j] = (r + amount, g + amount, b + amount)
 
 
-def Darker(matrix, width, height, amount):
+def darker(matrix, width, height, amount):
     amount = abs(int(amount))
     for i in range(0, width):
         for j in range(0, height):
@@ -17,7 +17,7 @@ def Darker(matrix, width, height, amount):
             matrix[i, j] = (r - amount, g - amount, b - amount)
 
 
-def BlackAndWhite(matrix, width, height):
+def black_and_white(matrix, width, height):
     for i in range(0, width):
         for j in range(0, height):
             r, g, b = matrix[i,j]
@@ -25,14 +25,14 @@ def BlackAndWhite(matrix, width, height):
             matrix[i, j] = (int(average), int(average), int(average))
 
 
-def Mosaic(matrix, width, height):
+def mosaic(matrix, width, height):
     for i in range(0, width):
         for j in range(0, height):
             if(i % 2 != 0 or j % 2 != 0):
                 matrix[i, j] = (0, 0, 0)
 
 
-def MirrorVetical(matrix, width, height):
+def mirror_vetical(matrix, width, height):
     for i in range(0, int(width / 2)):
         for j in range(0, height):
             r, g, b = matrix[i, j]
@@ -40,7 +40,7 @@ def MirrorVetical(matrix, width, height):
             matrix[width - 1 - i, j] = (r, g, b)
 
 
-def MirrorHorizontal(matrix, width, height):
+def mirror_horizontal(matrix, width, height):
     for i in range(0, width):
         for j in range(0, int(height / 2)):
             r, g, b = matrix[i, j]
@@ -48,7 +48,7 @@ def MirrorHorizontal(matrix, width, height):
             matrix[i, height - 1 - j] = (r, g, b)
 
 
-def MirrorDiagonal(matrix, width, height):
+def mirror_diagonal(matrix, width, height):
     for i in range(0, int(width / 2)):
         for j in range(0, height):
             r, g, b = matrix[i, j]
@@ -61,12 +61,12 @@ def MirrorDiagonal(matrix, width, height):
             matrix[i, height - 1 - j] = (r, g, b)
 
 
-def MirrorDiagonal2(matrix, width, height):
-    MirrorHorizontal(matrix, width, height)
-    MirrorVetical(matrix, width, height)
+def mirror_diagonal_2(matrix, width, height):
+    mirror_horizontal(matrix, width, height)
+    mirror_vetical(matrix, width, height)
 
 
-def Negative(matrix, width, height):
+def negative(matrix, width, height):
     max = 255
     for i in range(0, width):
         for j in range(0, height):
@@ -74,7 +74,7 @@ def Negative(matrix, width, height):
             matrix[i, j] = (max - r, max - g, max - b)
 
 
-def Encode(matrix, width, height, message):
+def encode(matrix, width, height, message):
     pass
 
 
