@@ -9,12 +9,12 @@ The functionalities:
 ![light](assets/light.png)
 # Darker
 ![dark](assets/dark.png)
-# Mozaic
-![mosaic](assets/mosaic.png)
 # Negative
 ![negative](assets/negative.png)
 # Black and White
 ![black_and_white](assets/black_and_white.png)
+# Mozaic
+![mosaic](assets/mosaic.png)
 # Mirroring Horizontal
 ![mirror2](assets/mirror2.png)
 # Mirroring vertical
