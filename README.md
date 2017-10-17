@@ -22,5 +22,7 @@ The functionalities:
 # Mirroring Diagonal
 ![mirror3](assets/mirror3.png)
 # Secret Message
+![encoded](assets/encoded_beginer.png)
+# Secret Message(advanced)
 ![encoded](assets/encoded.png)
 - "The problem is not the problem. The problem is your attitude about the problem"
